@@ -1,0 +1,21 @@
+[submodule "cpuinfo"]
+	path = cpuinfo
+	url = https://github.com/kloewe/mod-cpuinfo.git
+[submodule "cpuinfo-m"]
+	path = cpuinfo-m
+	url = https://github.com/kloewe/mod-cpuinfo-m.git
+[submodule "corr"]
+	path = corr
+	url = https://github.com/kloewe/mod-corr.git
+[submodule "corr-m"]
+	path = corr-m
+	url = https://github.com/kloewe/mod-corr-m.git
+[submodule "fconn"]
+	path = fconn
+	url = https://github.com/kloewe/mod-fconn.git
+[submodule "fconn-m"]
+	path = fconn-m
+	url = https://github.com/kloewe/mod-fconn-m.git
+[submodule "stats"]
+	path = stats
+	url = https://github.com/kloewe/mod-stats.git
