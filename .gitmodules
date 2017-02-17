@@ -19,3 +19,6 @@
 [submodule "stats"]
 	path = stats
 	url = https://github.com/kloewe/mod-stats.git
+[submodule "util-m"]
+	path = util-m
+	url = https://github.com/kloewe/mod-util-m.git
