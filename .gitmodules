@@ -22,3 +22,6 @@
 [submodule "util-m"]
 	path = util-m
 	url = https://github.com/kloewe/mod-util-m.git
+[submodule "dot"]
+	path = dot
+	url = https://github.com/kloewe/mod-dot.git
