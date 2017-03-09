@@ -35,3 +35,17 @@ A description of each function can be displayed in Matlab using
 
 ##### Bugs
 If you run into problems, please send an email to kl@kristianloewe.com.
+
+
+##### Citation
+If you use this program, please cite:
+
+Loewe K, Donohue SE, Schoenfeld MA, Kruse R, Borgelt C (2016).<br>
+Memory-efficient analysis of dense functional connectomes.<br>
+_Frontiers in Neuroinformatics_ 10:50.<br>
+[doi](http://dx.doi.org/10.3389/fninf.2016.00050)
+
+Loewe K, Grueschow M, Stoppel C, Kruse R, and Borgelt C (2014).<br>
+Fast construction of voxel-level functional connectivity graphs.<br>
+_BMC Neuroscience_ 15:78.<br>
+[doi](http://dx.doi.org/10.1186/1471-2202-15-78)
