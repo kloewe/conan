@@ -7,13 +7,13 @@
 #-----------------------------------------------------------------------------
 
 THISDIR = $(CURDIR)
-INSTALLCMD = addpath('$(CURDIR)/corr-m'); \
-             addpath('$(CURDIR)/cpuinfo-m'); \
-             addpath('$(CURDIR)/fconn-m'); \
-             addpath('$(CURDIR)/util-m/circos'); \
-             addpath('$(CURDIR)/util-m/data'); \
-             addpath('$(CURDIR)/util-m/file'); \
-             addpath('$(CURDIR)/util-m/mri'); \
+INSTALLCMD = addpath('$(CURDIR)/mod/corr-m'); \
+             addpath('$(CURDIR)/mod/cpuinfo-m'); \
+             addpath('$(CURDIR)/mod/fconn-m'); \
+             addpath('$(CURDIR)/mod/util-m/circos'); \
+             addpath('$(CURDIR)/mod/util-m/data'); \
+             addpath('$(CURDIR)/mod/util-m/file'); \
+             addpath('$(CURDIR)/mod/util-m/mri'); \
              savepath
 
 MATLABROOT = $(dir $(realpath $(shell which matlab)))
@@ -22,9 +22,9 @@ MEX = $(realpath $(MATLABROOT))/mex
 
 all:
 	@if [ -e "$(MEX)" ]; then \
-	  $(MAKE) -C corr-m/src; \
-	  $(MAKE) -C cpuinfo-m/src; \
-	  $(MAKE) -C fconn-m/src; \
+	  $(MAKE) -C mod/corr-m/src; \
+	  $(MAKE) -C mod/cpuinfo-m/src; \
+	  $(MAKE) -C mod/fconn-m/src; \
 	else \
 	  echo "Error: mex not found."; \
 	  echo "You may have to add MATLABROOT/bin to your path."; \
