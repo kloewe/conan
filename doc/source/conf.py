@@ -28,7 +28,7 @@ import os
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinx.ext.extlinks']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -107,7 +107,7 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -281,3 +281,26 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+
+# -- Options for extlinks extension ---------------------------------------
+
+import subprocess
+
+def get_sha(repo):
+    sha = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=repo).decode('ascii').strip()
+    return sha
+
+dir_corr_m = "../../mod/corr-m"
+dir_cpuinfo_m = "../../mod/cpuinfo-m"
+dir_fconn_m = "../../mod/fconn-m"
+
+url_corr_m = "https://github.com/kloewe/mod-corr-m"
+url_cpuinfo_m = "https://github.com/kloewe/mod-cpuinfo-m"
+url_fconn_m = "https://github.com/kloewe/mod-fconn-m"
+
+extlinks = {
+  'corr-m': (url_corr_m + "/blob/" + get_sha(dir_corr_m) + "/%s.m", ''),
+  'cpuinfo-m': (url_cpuinfo_m + "/blob/" + get_sha(dir_cpuinfo_m) + "/%s.m", ''),
+  'fconn-m': (url_fconn_m + "/blob/" + get_sha(dir_fconn_m) + "/%s.m", ''),
+}

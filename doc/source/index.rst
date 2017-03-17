@@ -1,71 +1,19 @@
-.. conan documentation master file, created by
-   sphinx-quickstart on Thu Mar  9 16:41:32 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+*conan* documentation
+=====================
 
-*conan*
-=======
+*conan* is a toolbox for functional CONnectivity ANalysis in Matlab.
 
-is a toolbox for functional CONnectivity ANalysis in Matlab
+.. toctree::
+   :maxdepth: 2
 
-
-
+   install
+   functions
 
 
-Installation
-------------
+References
+----------
 
-Prerequisites
-`````````````
-
-- 64-bit Linux
-- 64-bit Matlab
-- The GCC C compiler
-- A working MEX setup that uses GCC to compile the MEX files
-
-Download
-````````
-Clone the repository.
-::
-
-$ git clone --recursive https://github.com/kloewe/conan.git
-
-Build
-`````
-Change to the root directory of the cloned repository and build the MEX files.
-
-::
-
-$ cd conan
-$ make
-
-Set up
-``````
-Add the relevant directories to the Matlab path.
-::
-
-$ make install
-
-
-Documentation
--------------
-
-A description of each function can be displayed in Matlab using
-::
-
->> help <function-name>
-
-
-Bugs
-----
-
-If you run into problems, please send an email to kl@kristianloewe.com.
-
-
-Citation
---------
-
-If you use this program, please cite:
+If you use *conan*, please cite:
 
 | Loewe K, Donohue SE, Schoenfeld MA, Kruse R, Borgelt C (2016).
 | Memory-efficient analysis of dense functional connectomes.
