@@ -19,3 +19,5 @@ Functions
 .. include:: ../../mod/cpuinfo-m/doc/functions.rst
 
 .. include:: ../../mod/fconn-m/doc/functions.rst
+
+.. include:: ../../mod/util-m/doc/functions.rst

@@ -294,13 +294,16 @@ def get_sha(repo):
 dir_corr_m = "../../mod/corr-m"
 dir_cpuinfo_m = "../../mod/cpuinfo-m"
 dir_fconn_m = "../../mod/fconn-m"
+dir_util_m = "../../mod/util-m"
 
 url_corr_m = "https://github.com/kloewe/mod-corr-m"
 url_cpuinfo_m = "https://github.com/kloewe/mod-cpuinfo-m"
 url_fconn_m = "https://github.com/kloewe/mod-fconn-m"
+url_util_m = "https://github.com/kloewe/mod-util-m"
 
 extlinks = {
   'corr-m': (url_corr_m + "/blob/" + get_sha(dir_corr_m) + "/%s.m", ''),
   'cpuinfo-m': (url_cpuinfo_m + "/blob/" + get_sha(dir_cpuinfo_m) + "/%s.m", ''),
   'fconn-m': (url_fconn_m + "/blob/" + get_sha(dir_fconn_m) + "/%s.m", ''),
+  'util-m': (url_util_m + "/blob/" + get_sha(dir_util_m) + "/%s.m", ''),
 }

@@ -10,10 +10,7 @@ THISDIR = $(CURDIR)
 INSTALLCMD = addpath('$(CURDIR)/mod/corr-m'); \
              addpath('$(CURDIR)/mod/cpuinfo-m'); \
              addpath('$(CURDIR)/mod/fconn-m'); \
-             addpath('$(CURDIR)/mod/util-m/circos'); \
-             addpath('$(CURDIR)/mod/util-m/data'); \
-             addpath('$(CURDIR)/mod/util-m/file'); \
-             addpath('$(CURDIR)/mod/util-m/mri'); \
+             addpath('$(CURDIR)/mod/util-m'); \
              savepath
 
 MATLABROOT = $(dir $(realpath $(shell which matlab)))
