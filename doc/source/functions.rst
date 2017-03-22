@@ -29,6 +29,6 @@ Functional connectivity (fconn-m)
 `````````````````````````````````
 .. include:: ../../mod/fconn-m/doc/functions.rst
 
-Utilies (util-m)
-````````````````
+Utilities (util-m)
+``````````````````
 .. include:: ../../mod/util-m/doc/functions.rst
