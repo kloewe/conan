@@ -1,0 +1,4 @@
+doc/* linguist-documentation
+*.md linguist-language=Matlab
+makefile linguist-language=Matlab
+LICENSE linguist-language=Matlab
