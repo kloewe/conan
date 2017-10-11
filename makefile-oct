@@ -1,0 +1,41 @@
+#-----------------------------------------------------------------------------
+# File    : makefile-oct
+# Contents: build MEX files and install conan by adding the relevant
+#           directories to the octave path
+#
+# Author  : Kristian Loewe (with modifications for octave by Christina Rossmanith)
+#-----------------------------------------------------------------------------
+
+THISDIR = $(CURDIR)
+INSTALLCMD = addpath('$(CURDIR)/mod/corr-m'); \
+             addpath('$(CURDIR)/mod/cpuinfo-m'); \
+             addpath('$(CURDIR)/mod/fconn-m'); \
+             addpath('$(CURDIR)/mod/util-m'); \
+             savepath
+
+OCTAVE = $(realpath $(shell which octave))
+MEX = $(realpath $(shell which mkoctfile))
+
+all:
+	@if [ -e "$(MEX)" ]; then \
+	  $(MAKE) -f makefile-oct -C mod/corr-m/src; \
+	  $(MAKE) -f makefile-oct -C mod/cpuinfo-m/src; \
+	  $(MAKE) -f makefile-oct -C mod/fconn-m/src; \
+	else \
+	  echo "Error: mkoctfile not found."; \
+	  echo "You may have to adjust your PATH variable."; \
+	fi
+
+install:
+	@if [ -e "$(OCTAVE)" ]; then \
+	  $(OCTAVE) --no-gui --no-window-system \
+	  --eval "try; $(INSTALLCMD); catch; quit; end; quit;" > install.log; \
+	  grep -i -m1 -E 'Error|Warning' install.log; \
+	  status=$$?; \
+	  if [ $$status -eq 0 ]; then \
+	    cat install.log; \
+	  fi \
+	else \
+	  echo "Error: octave not found."; \
+	  echo "You may have to adjust your PATH variable."; \
+	fi

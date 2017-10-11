@@ -3,3 +3,4 @@ _templates
 _static
 build
 env
+install.log
